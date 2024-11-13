@@ -1,1 +1,4 @@
 .idea/*
+backend2/docker_compose.yml
+backend/docker_compose.yml     
+docker-compose.yml

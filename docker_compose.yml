@@ -1,0 +1,28 @@
+version: '3'
+services:
+  app1:
+    container_name: flask_app1
+    build:
+      context: .
+      dockerfile: dockerfile1
+    restart: always
+    environment:
+      PORT: 8001
+
+  app2:
+    container_name: flask_app2
+    build:
+      context: .
+      dockerfile: dockerfile2
+    restart: always
+    environment:
+      PORT: 8002
+
+  app3:
+    container_name: flask_app3
+    build:
+      context: .
+      dockerfile: dockerfile3
+    restart: always
+    environment:
+      PORT: 8003

@@ -7,4 +7,4 @@ services:
       dockerfile: dockerfile
     restart: always
     environment:
-      PORT: 8002
+      APP2_PORT: 8002

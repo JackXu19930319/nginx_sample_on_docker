@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx_server
+    ports:
+      - "80:80"  # 將容器的 80 端口映射到主機
+      - "443:443"  # 將容器的 443 端口映射到主機
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro  # 挂载自定义的 Nginx 配置
+      - ./web:/usr/share/nginx/html/web:ro  # 挂载静态文件目录
+      - ./web_1:/usr/share/nginx/html/web_1:ro  # 挂载静态文件目录
+    restart: always

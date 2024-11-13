@@ -1,6 +1,6 @@
 version: '3'
 services:
-  jack_test_app:
+  jack_test_app2:
     container_name: test_app
     build:
       context: .

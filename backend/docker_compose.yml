@@ -1,16 +1,10 @@
 version: '3'
 services:
   jack_test_app:
-    container_name: jack_test_app
+    container_name: test_app
     build:
       context: .
       dockerfile: dockerfile
     restart: always
-    networks:
-      - work_net
     environment:
       PORT: 8001
-
-networks:
-  work_net:
-    driver: bridge
